@@ -1,0 +1,94 @@
+{
+    "graph": {
+        "directed": true,
+        "nodes": [
+            {
+                "id": "1"
+            },
+            {
+                "id": "2"
+            },
+            {
+                "id": "3"
+            },
+            {
+                "id": "4"
+            }
+        ],
+        "links": [
+            {
+                "source": "1",
+                "target": "3",
+                "latency_function": {
+                    "constants": {
+                        "t": 1e-08,
+                        "a": 1000000000.0,
+                        "c": 1.0,
+                        "b": 1.0
+                    }
+                }
+            },
+            {
+                "source": "1",
+                "target": "4",
+                "latency_function": {
+                    "constants": {
+                        "t": 50.0,
+                        "a": 0.02,
+                        "c": 1.0,
+                        "b": 1.0
+                    }
+                }
+            },
+            {
+                "source": "3",
+                "target": "2",
+                "latency_function": {
+                    "constants": {
+                        "t": 50.0,
+                        "a": 0.02,
+                        "c": 1.0,
+                        "b": 1.0
+                    }
+                }
+            },
+            {
+                "source": "3",
+                "target": "4",
+                "latency_function": {
+                    "constants": {
+                        "t": 10.0,
+                        "a": 0.1,
+                        "c": 1.0,
+                        "b": 1.0
+                    }
+                }
+            },
+            {
+                "source": "4",
+                "target": "2",
+                "latency_function": {
+                    "constants": {
+                        "t": 1e-08,
+                        "a": 1000000000.0,
+                        "c": 1.0,
+                        "b": 1.0
+                    }
+                }
+            }
+        ]
+    },
+    "od": [
+        "1|2"
+    ],
+    "demand": {
+        "1|2": 6.0
+    },
+    "routes": {
+        "1|2": [
+            "1-3,3-4,4-2",
+            "1-4,4-2",
+            "1-3,3-2"
+        ]
+    }
+}
