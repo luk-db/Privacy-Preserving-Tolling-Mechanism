@@ -1,0 +1,5 @@
+numpy
+networkx
+gymnasium
+matplotlib
+scikit-learn
